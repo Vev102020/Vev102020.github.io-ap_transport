@@ -1,47 +1,67 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <base href="./">
+  <head>
+    <base href="./" />
 
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+    <meta charset="UTF-8" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta name="description" content="A new Flutter project." />
 
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="transport">
-  <link rel="apple-touch-icon" href="./icons/Icon-192.png">
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="transport" />
+    <link rel="apple-touch-icon" href="./icons/Icon-192.png" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="./favicon.png"/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./favicon.png" />
 
-  <title>transport</title>
-  <link rel="manifest" href="./manifest.json">
+    <title>transport</title>
+    <link rel="manifest" href="./manifest.json" />
 
-  <script>
-    // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "1170825689";
-  </script>
-  <!-- This script adds the flutter initialization JS code -->
-  <script src="flutter.js" defer></script>
-</head>
-<body>
-  <script>
-    window.addEventListener('load', function(ev) {
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
-          });
-        }
+    <!-- ADD THIS BEFORE YOUR main.dart.js SCRIPT -->
+    <script>
+      // TODO: Replace the following with your app's Firebase project configuration.
+      // See: https://support.google.com/firebase/answer/7015592
+      const firebaseConfig = {
+        apiKey: "AIzaSyDj2uyLKgQAMxh1HM536T9a97xVhzuNHXc",
+        authDomain: "transport-43a34.firebaseapp.com",
+        projectId: "transport-43a34",
+        storageBucket: "transport-43a34.firebasestorage.app",
+        messagingSenderId: "819581081340",
+        appId: "1:819581081340:web:68c12b1e3d9dc7dd9a6979",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script>
+      // The value below is injected by flutter build, do not touch.
+      const serviceWorkerVersion = "3699731949";
+    </script>
+    <!-- This script adds the flutter initialization JS code -->
+    <script src="./flutter.js" defer></script>
+  </head>
+  <body>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+    <script src="main.dart.js" type="application/javascript"></script>
+
+    <script>
+      window.addEventListener("load", function (ev) {
+        // Download main.dart.js
+        _flutter.loader.loadEntrypoint({
+          serviceWorker: {
+            serviceWorkerVersion: serviceWorkerVersion,
+          },
+          onEntrypointLoaded: function (engineInitializer) {
+            engineInitializer.initializeEngine().then(function (appRunner) {
+              appRunner.runApp();
+            });
+          },
+        });
       });
-    });
-  </script>
-  <script src="./main.dart.js" defer></script>
-</body>
+    </script>
+    <script src="./main.dart.js" defer></script>
+  </body>
 </html>
